@@ -52,45 +52,43 @@ Future<void> main() async {
     final fontPath = '/fonts/$font.ttf';
 
     final htmlContent = '''
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Rendered Text</title>
-        <style>
-            @font-face {
-                font-family: '$font';
-                src: url('$fontPath') format('truetype');
-            }
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Rendered Text</title>
+          <style>
+              @font-face {
+                  font-family: '$font';
+                  src: url('$fontPath') format('truetype');
+              }
 
-            body {
-                margin: 40px;
-                font-size: 24px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-            }
+              body {
+                  margin: 0px;
+                  font-size: 29px;
+                  padding: 5px;
+              }
 
-            .vertical-text {
-                font-family: '$font';
-                writing-mode: vertical-rl;
-                transform: scale(-1, 1);
-                white-space: nowrap;
-            }
-        </style>
-        <script>
-            window.onload = function() {
-                window.print();
-            }
-        </script>
-    </head>
-    <body>
-        <p class="vertical-text">$text</p>
-    </body>
-    </html>
-''';
+              .vertical-text {
+                  font-family: '$font';
+                  writing-mode: vertical-rl;
+                  transform: scale(-1, 1);
+                  white-space: pre-wrap; /* Preserva espaços e quebras de linha */
+                   letter-spacing: 2mm;
+              }
+          </style>
+          <script>
+              window.onload = function() {
+                  window.print();
+              }
+          </script>
+      </head>
+      <body>
+          <p class="vertical-text">$text</p>
+      </body>
+      </html>
+      ''';
 
     try {
       // Obtém o diretório de documentos do aplicativo
