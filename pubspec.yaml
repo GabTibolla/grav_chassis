@@ -1,0 +1,65 @@
+name: grav_chassis
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  shelf: ^1.4.1
+  shelf_router: ^1.1.4
+  shelf_static: ^1.1.2
+  path_provider: ^2.1.3
+  http: ^1.2.2
+  url_launcher: ^6.3.0
+  webview_flutter: ^4.8.0
+  
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/fonts/
+
+  fonts:
+    - family: mercedes
+      fonts:
+        - asset: assets/fonts/mercedes.ttf
+    - family: nacional
+      fonts:
+        - asset: assets/fonts/nacional.ttf
+    - family: nacionalestreito
+      fonts:
+        - asset: assets/fonts/nacionalestreito.ttf
+    - family: captiva
+      fonts:
+        - asset: assets/fonts/captiva.ttf
+    - family: celta2002
+      fonts:
+        - asset: assets/fonts/celta2002.ttf
+    - family: corsa2003
+      fonts:
+        - asset: assets/fonts/corsa2003.ttf
+    - family: golfantigo
+      fonts:
+        - asset: assets/fonts/golfantigo.ttf
+    - family: golfaudi
+      fonts:
+        - asset: assets/fonts/golfaudi.ttf
+    - family: mitsubishi
+      fonts:
+        - asset: assets/fonts/mitsubishi.ttf
+    - family: mitsubishinacional
+      fonts:
+        - asset: assets/fonts/mitsubishinacional.ttf
+
+
