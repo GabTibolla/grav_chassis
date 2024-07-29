@@ -97,7 +97,6 @@ Future<void> main() async {
       final file = File('${directory.path}/index.html');
       await file.writeAsString(htmlContent);
     } catch (ex) {
-      print(ex.toString());
       return Response.internalServerError(body: ex.toString());
     }
 
@@ -115,6 +114,6 @@ Future<void> main() async {
   router.mount('/', staticHandler);
 
   // Inicia o servidor
-  final server = await shelf_io.serve(router.call, 'localhost', 8080);
-  print('Servidor rodando em http://${server.address.host}:${server.port}');
+  await shelf_io.serve(router.call, 'localhost', 8080);
+  //print('Servidor rodando em http://${server.address.host}:${server.port}');
 }
