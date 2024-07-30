@@ -61,5 +61,8 @@ flutter:
     - family: mitsubishinacional
       fonts:
         - asset: assets/fonts/mitsubishinacional.ttf
+    - family: nacionalantigo
+      fonts:
+        - asset: assets/fonts/nacionalantigo.ttf
 
 

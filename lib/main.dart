@@ -195,6 +195,7 @@ class _FontSelectorScreenState extends State<FontSelectorScreen> {
   final List<Map<String, String>> _fontOptions = [
     {'value': 'mercedes', 'label': 'Mercedes'},
     {'value': 'nacional', 'label': 'Nacional'},
+    {'value': 'nacionalantigo', 'label': 'Nacional Antigo'},
     {'value': 'nacionalestreito', 'label': 'Nacional Estreito'},
     {'value': 'mitsubishi', 'label': 'Mitsubishi'},
     {'value': 'mitsubishinacional', 'label': 'Mitsubishi Nacional'},
