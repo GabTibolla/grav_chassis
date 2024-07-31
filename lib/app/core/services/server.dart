@@ -7,6 +7,8 @@ import 'package:shelf_router/shelf_router.dart';
 import 'package:shelf_static/shelf_static.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
+// Copia a fonte escolhida para o diretório de documentos do app
+// Essa etapa é importante devido às permissoes de acesso do app ao celular
 Future<void> copyFontsToDocumentsDirectory(String font) async {
   final directory = await getApplicationDocumentsDirectory();
 
@@ -25,6 +27,7 @@ Future<void> copyFontsToDocumentsDirectory(String font) async {
 Future<void> main() async {
   final router = Router();
 
+  // Rota para devolver a página criada
   router.get('/page', (Request request) async {
     final directory = await getApplicationDocumentsDirectory();
     final file = File('${directory.path}/index.html');
@@ -46,11 +49,16 @@ Future<void> main() async {
     final text = data['text'];
     final font = data['font'];
 
+    // Copia a fonte escolhida para o diretório de documentos do app
     await copyFontsToDocumentsDirectory(font);
 
+    // pega o diretorio de documentos do app
     final directory = await getApplicationDocumentsDirectory();
+
+    // pega o caminho da fonte
     final fontPath = '/fonts/$font.ttf';
 
+    // cria o html
     final htmlContent = '''
       <!DOCTYPE html>
       <html lang="en">
